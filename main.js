@@ -88,4 +88,29 @@ class VNode {
       }
     }
   }
-  
+  let vNodes1 = v('div', [
+    v('p', [
+      v('span', [ v('#text', 'xiedaimala.com') ] )
+      ]
+    ),
+    v('span', [
+      v('#text',  'jirengu.com')
+      ])
+  ]
+)
+
+let vNodes2 = v('div', [
+    v('p', [
+      v('span', [ 
+        v('#text', 'xiedaimala.com') 
+        ] )
+      ]
+    ),
+    v('span', [
+      v('#text',  'jirengu.coms'),
+      v('#text',  'ruoyu')
+      ])
+  ]
+)
+const root = document.querySelector('#root')
+patchElement(root, vNodes1)
